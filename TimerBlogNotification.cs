@@ -26,12 +26,11 @@ namespace tanabebe.tech.function
         static TimerBlogNotification()
         {
             HttpClient = new HttpClient();
-            // _notificationIInfo = new NotificationInfo();
             Random = new Random(Seed++);
         }
 
         [Function("TimerBlogNotification")]
-        public static async Task Run([TimerTrigger("30 8 * * * *")] MyInfo myTimer, FunctionContext context)
+        public static async Task Run([TimerTrigger("0 30 8 * * *")] MyInfo myTimer, FunctionContext context)
         {
             var logger = context.GetLogger("TimerBlogNotification");
             var xml = await GetHatenaBlogXmlText();
