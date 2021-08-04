@@ -112,7 +112,7 @@ namespace tanabebe.tech.function
                     optionMessage = "あっという間にもう水曜ですっ！";
                     break;
                 case DayOfWeek.Thursday:
-                    optionMessage = "まだ木曜に書いてないのはヤバない？";
+                    optionMessage = "まだ木曜に書いてないのはヤバない？\n\nところで，Pipelinesは組めたん？";
                     break;
                 case DayOfWeek.Friday:
                     optionMessage = "明日休みなのにブログ書いていないなんて...\n\nんなわけないよね？";
