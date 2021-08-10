@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Xml;
+using HatebNotification;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
 
@@ -91,7 +92,7 @@ namespace tanabebe.tech.function
 
         public static string SetExcellentMessage()
         {
-            string message = "ブログ更新お疲れさま！\\rストロングゼロを許可しよう！";
+            string message = Constants.SuccessMessages.Ok;
             string imagePath = "https://stblognotification.blob.core.windows.net/images/end-toki.jpg";
             return GenerateNotificationMessage(message, imagePath);
         }
@@ -102,25 +103,25 @@ namespace tanabebe.tech.function
             switch(Now.DayOfWeek)
             {
                 case DayOfWeek.Monday:
-                    optionMessage = "本日は月曜です。\n\n今書いておくと開放されるぞ...";
+                    optionMessage = Constants.DayOfWeekMessages.Monday;
                     break;
                 case DayOfWeek.Tuesday:
-                    optionMessage = "週始めの更新が...楽だぜ？";
+                    optionMessage = Constants.DayOfWeekMessages.Tuesday;
                     break;
                 case DayOfWeek.Wednesday:
-                    optionMessage = "あっという間にもう水曜ですっ！";
+                    optionMessage = Constants.DayOfWeekMessages.Wednesday;
                     break;
                 case DayOfWeek.Thursday:
-                    optionMessage = "まだ木曜に書いてないのはヤバない？\n\nところで，Pipelinesは組めたん？";
+                    optionMessage = Constants.DayOfWeekMessages.Thursday;
                     break;
                 case DayOfWeek.Friday:
-                    optionMessage = "明日休みなのにブログ書いていないなんて...\n\nんなわけないよね？";
+                    optionMessage = Constants.DayOfWeekMessages.Friday;
                     break;
                 case DayOfWeek.Saturday:
-                    optionMessage = "平日のサボりを取り返しましょう。";
+                    optionMessage = Constants.DayOfWeekMessages.Saturday;
                     break;
                 case DayOfWeek.Sunday:
-                    optionMessage = "なるほどっ！？\n\n今週は2記事書くんだね！";
+                    optionMessage = Constants.DayOfWeekMessages.Sunday;
                     break;
                 default:
                     break; 
