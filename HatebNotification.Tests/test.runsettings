@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+    <RunConfiguration>
+        <EnvironmentVariables>
+            <RANDOM_MESSAGE>[{"Message":"ブログがまだ更新されていない模様","ImagePath":"https://stblognotification.blob.core.windows.net/images/aori-toki.jpg"},{"Message":"ブログがまだ更新されていないっぽいぞ","ImagePath":"https://stblognotification.blob.core.windows.net/images/no-end.jpg"},{"Message":"ブログがまだ更新されていない模様","ImagePath":"https://stblognotification.blob.core.windows.net/images/mostdangerous.jpg"},{"Message":"ブログがまだ更新されていない模様","ImagePath":"https://stblognotification.blob.core.windows.net/images/haji.jpg"}]</RANDOM_MESSAGE>
+        </EnvironmentVariables>
+    </RunConfiguration>
+</RunSettings>
